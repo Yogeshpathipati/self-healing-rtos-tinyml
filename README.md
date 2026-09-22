@@ -1,10 +1,5 @@
 # Self-Aware Embedded System: AI-Driven Self-Healing FreeRTOS Architecture on STM32
 
-[![Platform](https://img.shields.io/badge/Platform-STM32%20(ARM%20Cortex--M)-blue.svg)](https://www.st.com/)
-[![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-green.svg)](https://www.freertos.org/)
-[![TinyML](https://img.shields.io/badge/TinyML-Autoencoder%20(4--3--4)-orange.svg)]()
-[![Language](https://img.shields.io/badge/Language-C%20%2F%20C%2B%2B%20%2F%20Python-blueviolet.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
 
 A resilient, meta-cognitive microcontroller platform implemented on **STM32 (ARM Cortex-M)** with **FreeRTOS**. Rather than relying on traditional, blunt watchdog timers (WDT) that force whole-system restarts upon fault detection, this architecture combines an **on-device TinyML Autoencoder** with a **deterministic Self-Healing Actuation Matrix**. 
 
