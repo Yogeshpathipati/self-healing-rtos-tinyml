@@ -1,0 +1,47 @@
+
+// ── 1. NORMALISATION PARAMETERS ─────────────────────────────────────────
+// Replace the FEAT_MEAN and FEAT_STD arrays in anomaly_detector.cpp:
+
+static const float FEAT_MEAN[4] = {
+    17.306667f   /* cpu_load */,
+    626.933333f   /* stack_free */,
+    0.000000f   /* isr_latency */,
+    24.105000f   /* temperature */
+};
+
+static const float FEAT_STD[4] = {
+    24.415964f   /* cpu_load */,
+    244.159638f   /* stack_free */,
+    1.000000f   /* isr_latency */,
+    0.478757f   /* temperature */
+};
+
+// ── 2. ENCODER WEIGHTS & BIASES ─────────────────────────────────────────
+// Replace W_enc and b_enc in anomaly_detector.cpp:
+
+static const float W_enc[3][4] = {
+    { -1.211962f, 1.183310f, -0.001584f, -0.532579f },
+    { 0.464873f, -0.350778f, 0.000204f, -1.906641f },
+    { 1.202984f, -1.322724f, -0.000000f, 0.715308f }
+};
+
+static const float b_enc[] = { 1.140003f, -0.025462f, -0.904528f };
+
+// ── 3. DECODER WEIGHTS & BIASES ─────────────────────────────────────────
+// Replace W_dec and b_dec in anomaly_detector.cpp:
+
+static const float W_dec[4][3] = {
+    { -1.435416f, 0.390066f, 0.920213f },
+    { 1.092849f, -0.451194f, -1.238099f },
+    { 0.325190f, -0.049690f, 0.318127f },
+    { -0.355703f, -1.747862f, 0.614971f }
+};
+
+static const float b_dec[] = { 0.484695f, -0.117156f, -0.302895f, 0.920696f };
+
+// ── 4. MSE_MAX ───────────────────────────────────────────────────────────
+// Replace MSE_MAX in anomaly_detector.cpp:
+
+static const float MSE_MAX = 0.727618f;
+
+// ════════════════════════════════════════════════════════════════════════
